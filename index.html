@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather-app</title>
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <div class="weather-container">
+
+            <div class="weather-box-1">
+                <p id="day" data-day></p>
+                <p id="date" data-date></p>
+                <div id="location">
+                    <img src="./icons/location.png" width="18" alt="loading" class="child">
+                    <p class="child" data-country>india</p>
+                    <span data-countryCode></span>
+                </div>
+            </div>
+
+            <div class="weather-box-2">
+                <img src="./icons/rainy.png" alt="loading.." width="60" data-weatherImg>
+                <p data-temp id="temp">25℃</p>
+                <p data-weather id="season">coudy</p>
+            </div>
+
+        </div>
+        <div class="weather-parameters">
+            <div id="box1" class="weather-parameters-box">
+                <div>
+                    <p>VISIBILITY</p><span class="values" data-visibility>0%</span>
+                </div>
+
+                <div>
+                    <p>HUMIDITY</p>
+                    <span class="values" data-humidity>42%</span>
+                </div>
+                <div>
+                    <p>WIND</p>
+                    <span class="values" data-wind>3km/h</span>
+                </div>
+
+            </div>
+            <div id="box2" class="weather-parameters-box">
+                <div class="cards">
+                    <img src="./icons/sun.png" width="30">
+                    <P>THU</P>
+                    <p>25℃</p>
+                </div>
+                <div class="cards">
+                    <img src="./icons/rainy.png" width="30">
+                    <P>THU</P>
+                    <p>25℃</p>
+                </div>
+                <div class="cards">
+                    <img src="./icons/cloudy-day.png" width="30">
+                    <P>THU</P>
+                    <p>25℃</p>
+                </div>
+                <div class="cards">
+                    <img src="./icons/cloudy-day.png" width="30">
+                    <P>THU</P>
+                    <p>25℃</p>
+                </div>
+            </div>
+            <div id="weather-form" class="weather-parameters-box">
+                <input type="text" placeholder="Enter city name" name="city" id="city_name" data-name>
+
+                <button onclick="fetchWeatherInfo()">
+                    <img src="./icons/location.png" width="15" alt="loading..">Search location
+                </button>
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- <form>
+        <input type="text" placeholder="Enter city name" name="city" id="city_name" autofocus>
+        <input type="button" value="btn" onclick="fetchData()">
+
+    </form>
+
+    <br>
+    <div>
+        <h2>city: <span id="city1"></span></h2>
+        <h2>temp: <span id="temp"></span></h2>
+        <h2>humidity: <span id="humidity"></span></h2>
+        <h2>wind speed: <span id="speed"></span></h2>
+    </div> -->
+    <script src="script.js"></script>
+</body>
+
+</html>
